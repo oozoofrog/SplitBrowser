@@ -21,50 +21,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="L1X-tu-6hc">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hEL-CN-vX5">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UeH-jC-OHQ" customClass="WKWebView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="151"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="151" id="nFm-dH-lXd"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="4aC-bB-ybO">
-                                        <rect key="frame" x="0.0" y="151" width="375" height="3"/>
-                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="3" id="9lw-fL-eUV"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YnV-fe-j6s" customClass="WKWebView">
-                                        <rect key="frame" x="0.0" y="154" width="375" height="513"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="513" id="CwG-Sx-k1O"/>
-                                        </constraints>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gKH-Pu-0vq">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
-                            </stackView>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="gKH-Pu-0vq" secondAttribute="trailing" id="Buu-rm-8SS"/>
+                                    <constraint firstItem="gKH-Pu-0vq" firstAttribute="top" secondItem="hEL-CN-vX5" secondAttribute="top" id="Prp-Ch-bW7"/>
+                                    <constraint firstItem="gKH-Pu-0vq" firstAttribute="width" secondItem="hEL-CN-vX5" secondAttribute="width" id="ef8-pa-YsJ"/>
+                                    <constraint firstItem="gKH-Pu-0vq" firstAttribute="leading" secondItem="hEL-CN-vX5" secondAttribute="leading" id="fr0-BQ-JcW"/>
+                                    <constraint firstAttribute="bottom" secondItem="gKH-Pu-0vq" secondAttribute="bottom" id="gT0-oB-ZBT"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="tb4-zE-s41"/>
+                                </connections>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="L1X-tu-6hc" secondAttribute="trailing" id="CYs-s4-3Pq"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="L1X-tu-6hc" secondAttribute="bottom" id="Mj5-mM-0zW"/>
-                            <constraint firstItem="L1X-tu-6hc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="YpS-8g-v3a"/>
-                            <constraint firstItem="L1X-tu-6hc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="m2x-Zd-xXB"/>
+                            <constraint firstAttribute="trailing" secondItem="hEL-CN-vX5" secondAttribute="trailing" id="CF1-kR-uiJ"/>
+                            <constraint firstItem="gKH-Pu-0vq" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="D3x-MG-Xez"/>
+                            <constraint firstItem="hEL-CN-vX5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GLG-9a-8Jb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hEL-CN-vX5" secondAttribute="bottom" id="M7J-u7-1nD"/>
+                            <constraint firstItem="hEL-CN-vX5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Pja-Qn-0Nm"/>
+                            <constraint firstItem="gKH-Pu-0vq" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" priority="250" id="c6E-GF-jWg"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="firstBrowser" destination="UeH-jC-OHQ" id="VzZ-ui-cKh"/>
-                        <outlet property="firstBrowserHeight" destination="nFm-dH-lXd" id="jtT-sZ-yt5"/>
-                        <outlet property="secondBrowser" destination="YnV-fe-j6s" id="G0b-4T-VgL"/>
-                        <outlet property="secondBrowserHeight" destination="CwG-Sx-k1O" id="Slp-Of-EEp"/>
-                        <outlet property="spilitHeight" destination="9lw-fL-eUV" id="B42-AZ-kUs"/>
-                        <outlet property="splitter" destination="4aC-bB-ybO" id="qVz-V3-nG1"/>
-                        <outletCollection property="browsers" destination="UeH-jC-OHQ" collectionClass="NSMutableArray" id="3Kh-kz-af1"/>
-                        <outletCollection property="browserHeights" destination="nFm-dH-lXd" collectionClass="NSMutableArray" id="WPu-Tq-D3h"/>
+                        <outlet property="scrollContentsView" destination="gKH-Pu-0vq" id="cy1-0y-2FS"/>
+                        <outlet property="scrollView" destination="hEL-CN-vX5" id="FcA-6z-ARS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

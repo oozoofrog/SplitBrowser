@@ -9,15 +9,14 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIScrollViewDelegate {
 
-    @IBOutlet weak var splitter: UIView!
-    @IBOutlet weak var spilitHeight: NSLayoutConstraint!
-
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var scrollContentsView: UIView!
     
-    @IBOutlet var browsers: [WKWebView]!
-    
-    @IBOutlet var browserHeights: [NSLayoutConstraint]!
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,5 +29,6 @@ class ViewController: UIViewController {
     }
 
 
+    
 }
 
