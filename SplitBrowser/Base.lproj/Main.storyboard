@@ -22,53 +22,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hEL-CN-vX5">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gKH-Pu-0vq">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="6Bb-ij-8g1">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
-                                                <subviews>
-                                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="bya-o6-yFL">
-                                                        <rect key="frame" x="0.0" y="456" width="375" height="44"/>
-                                                        <color key="barTintColor" red="0.99607843139999996" green="0.80784313730000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                        <connections>
-                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="wfH-rQ-rdN"/>
-                                                        </connections>
-                                                    </searchBar>
-                                                </subviews>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="6Bb-ij-8g1">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
                                                 <color key="backgroundColor" red="1" green="0.42173938350000001" blue="0.47359945489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" priority="250" constant="500" id="1gd-bH-eNF"/>
-                                                    <constraint firstItem="bya-o6-yFL" firstAttribute="leading" secondItem="6Bb-ij-8g1" secondAttribute="leading" id="CpW-f1-tDG"/>
-                                                    <constraint firstAttribute="bottom" secondItem="bya-o6-yFL" secondAttribute="bottom" id="VlY-N4-QgI"/>
-                                                    <constraint firstAttribute="trailing" secondItem="bya-o6-yFL" secondAttribute="trailing" id="gya-Yj-Ewp"/>
+                                                    <constraint firstAttribute="height" priority="250" constant="20" id="1gd-bH-eNF"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="iOp-ay-S7a">
-                                                <rect key="frame" x="0.0" y="503" width="375" height="500"/>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="iOp-ay-S7a">
+                                                <rect key="frame" x="0.0" y="23" width="375" height="500"/>
                                                 <subviews>
-                                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="gvO-yq-aVC">
+                                                    <searchBar contentMode="redraw" showsSearchResultsButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="49M-Li-OGy">
                                                         <rect key="frame" x="0.0" y="456" width="375" height="44"/>
-                                                        <color key="barTintColor" red="0.99607843139999996" green="0.80784313730000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                        <connections>
-                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="hEX-nR-BTK"/>
-                                                        </connections>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="webSearch"/>
                                                     </searchBar>
                                                 </subviews>
                                                 <color key="backgroundColor" red="1" green="0.79389765020000003" blue="0.44105970659999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="gvO-yq-aVC" secondAttribute="trailing" id="Qm6-4t-szs"/>
-                                                    <constraint firstItem="gvO-yq-aVC" firstAttribute="leading" secondItem="iOp-ay-S7a" secondAttribute="leading" id="lxx-E8-p89"/>
+                                                    <constraint firstItem="49M-Li-OGy" firstAttribute="leading" secondItem="iOp-ay-S7a" secondAttribute="leading" id="I1H-2j-nDs"/>
+                                                    <constraint firstAttribute="trailing" secondItem="49M-Li-OGy" secondAttribute="trailing" id="bXJ-Gk-4Q2"/>
                                                     <constraint firstAttribute="height" priority="250" constant="500" id="mkh-in-ir9"/>
-                                                    <constraint firstAttribute="bottom" secondItem="gvO-yq-aVC" secondAttribute="bottom" id="pFB-C0-vHx"/>
+                                                    <constraint firstAttribute="bottom" secondItem="49M-Li-OGy" secondAttribute="bottom" id="vQD-Qe-uBQ"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lRs-O0-Zp0">
-                                                <rect key="frame" x="0.0" y="500" width="375" height="3"/>
+                                                <rect key="frame" x="0.0" y="20" width="375" height="3"/>
                                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
@@ -100,22 +83,37 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="gKH-Pu-0vq" secondAttribute="trailing" id="Buu-rm-8SS"/>
                                     <constraint firstItem="gKH-Pu-0vq" firstAttribute="top" secondItem="hEL-CN-vX5" secondAttribute="top" id="Prp-Ch-bW7"/>
-                                    <constraint firstItem="gKH-Pu-0vq" firstAttribute="width" secondItem="hEL-CN-vX5" secondAttribute="width" id="ef8-pa-YsJ"/>
+                                    <constraint firstItem="gKH-Pu-0vq" firstAttribute="width" secondItem="hEL-CN-vX5" secondAttribute="width" priority="250" id="ef8-pa-YsJ"/>
                                     <constraint firstItem="gKH-Pu-0vq" firstAttribute="leading" secondItem="hEL-CN-vX5" secondAttribute="leading" id="fr0-BQ-JcW"/>
                                     <constraint firstAttribute="bottom" secondItem="gKH-Pu-0vq" secondAttribute="bottom" id="gT0-oB-ZBT"/>
+                                    <constraint firstItem="gKH-Pu-0vq" firstAttribute="height" secondItem="hEL-CN-vX5" secondAttribute="height" priority="250" id="ows-QX-BAA"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="tb4-zE-s41"/>
                                 </connections>
                             </scrollView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ec6-cy-xx3">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="flexibleSpace" id="QDS-gE-vDw"/>
+                                    <barButtonItem title="Item" id="mvE-zl-pvf"/>
+                                    <barButtonItem style="plain" id="WGW-8B-Be3">
+                                        <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="b09-6D-FVl">
+                                            <rect key="frame" x="310" y="6.5" width="51" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </switch>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="0.6330667001820186" green="1" blue="0.8032381767245621" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="hEL-CN-vX5" secondAttribute="trailing" id="CF1-kR-uiJ"/>
-                            <constraint firstItem="gKH-Pu-0vq" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="D3x-MG-Xez"/>
                             <constraint firstItem="hEL-CN-vX5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GLG-9a-8Jb"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hEL-CN-vX5" secondAttribute="bottom" id="M7J-u7-1nD"/>
-                            <constraint firstItem="gKH-Pu-0vq" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" priority="250" id="c6E-GF-jWg"/>
+                            <constraint firstItem="ec6-cy-xx3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="baI-9I-69c"/>
+                            <constraint firstItem="ec6-cy-xx3" firstAttribute="top" secondItem="hEL-CN-vX5" secondAttribute="bottom" id="rIz-Xd-SU8"/>
+                            <constraint firstAttribute="trailing" secondItem="ec6-cy-xx3" secondAttribute="trailing" id="tY3-FC-0eX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ec6-cy-xx3" secondAttribute="bottom" id="uJQ-85-nzl"/>
                             <constraint firstItem="hEL-CN-vX5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="v4S-FA-f2d"/>
                         </constraints>
                     </view>
@@ -124,12 +122,13 @@
                         <outlet property="scrollContentsView" destination="gKH-Pu-0vq" id="cy1-0y-2FS"/>
                         <outlet property="scrollView" destination="hEL-CN-vX5" id="FcA-6z-ARS"/>
                         <outlet property="splitter" destination="lRs-O0-Zp0" id="B8x-ko-PAI"/>
+                        <outlet property="switchBrowser" destination="b09-6D-FVl" id="0CO-n9-hUL"/>
+                        <outlet property="switchLabelItem" destination="mvE-zl-pvf" id="1Js-IX-0ia"/>
+                        <outlet property="webSearchBar" destination="49M-Li-OGy" id="hFv-gA-RAH"/>
                         <outletCollection property="browsers" destination="6Bb-ij-8g1" collectionClass="NSMutableArray" id="PqX-va-UK5"/>
                         <outletCollection property="browserHeights" destination="1gd-bH-eNF" collectionClass="NSMutableArray" id="sEH-b8-7cE"/>
                         <outletCollection property="browsers" destination="iOp-ay-S7a" collectionClass="NSMutableArray" id="arg-V8-6Su"/>
                         <outletCollection property="browserHeights" destination="mkh-in-ir9" collectionClass="NSMutableArray" id="okg-Ng-yj8"/>
-                        <outletCollection property="searchs" destination="bya-o6-yFL" collectionClass="NSMutableArray" id="PlN-E3-xh1"/>
-                        <outletCollection property="searchs" destination="gvO-yq-aVC" collectionClass="NSMutableArray" id="2Hd-L5-J9D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

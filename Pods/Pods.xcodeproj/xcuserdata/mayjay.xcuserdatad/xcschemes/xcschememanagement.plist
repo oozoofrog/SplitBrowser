@@ -19,11 +19,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>ReactiveCocoa.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Realm.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -34,13 +29,54 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Result.xcscheme</key>
+		<key>RxCocoa.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RxSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict/>
+	<dict>
+		<key>7D258C28D07DA70B32C48D4ABBC03F17</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>978D816EC2C8AFDA51C35C401C352B42</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C7364301D3D1F6B0B590D9AF7948C8EE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CCD364E48F29E48F423DCA6F448CC36F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CD2BD42D694011FEE65FD443A91DA0CE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EA28325EC3CF92825DDF1FF71B5DF72B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FA94DAB1F635121F5AB46FA32E9AEDF5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
 </dict>
 </plist>
