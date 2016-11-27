@@ -9,13 +9,16 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController, UIScrollViewDelegate {
+class ViewController: UIViewController, UIScrollViewDelegate, UISearchBarDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var scrollContentsView: UIView!
     
     @IBOutlet var browsers: [UIView]!
     @IBOutlet var browserHeights: [NSLayoutConstraint]!
+    @IBOutlet var searchs: [UISearchBar]!
+    
+    lazy var webViews: [WKWebView] = []
     
     @IBOutlet weak var splitter: UIView!
     @IBOutlet var splitGesture: UIPinchGestureRecognizer!
@@ -26,14 +29,22 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        browsers.forEach{
+            view in
+            let web = WKWebView(frame: view.bounds)
+            web.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            view.insertSubview(web, at: 0)
+        }
     }
+    
+    //MARK: UISearchBarDelegate
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
     }
-
+    
+    //MARK: UIPanGesture
     var beganCenter: CGPoint = CGPoint()
     @IBAction func pan(_ sender: UIPanGestureRecognizer) {
         switch sender.state {

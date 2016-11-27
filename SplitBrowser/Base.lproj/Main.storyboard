@@ -29,16 +29,42 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="6Bb-ij-8g1">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
+                                                <subviews>
+                                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="bya-o6-yFL">
+                                                        <rect key="frame" x="0.0" y="456" width="375" height="44"/>
+                                                        <color key="barTintColor" red="0.99607843139999996" green="0.80784313730000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="wfH-rQ-rdN"/>
+                                                        </connections>
+                                                    </searchBar>
+                                                </subviews>
                                                 <color key="backgroundColor" red="1" green="0.42173938350000001" blue="0.47359945489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" priority="250" constant="500" id="1gd-bH-eNF"/>
+                                                    <constraint firstItem="bya-o6-yFL" firstAttribute="leading" secondItem="6Bb-ij-8g1" secondAttribute="leading" id="CpW-f1-tDG"/>
+                                                    <constraint firstAttribute="bottom" secondItem="bya-o6-yFL" secondAttribute="bottom" id="VlY-N4-QgI"/>
+                                                    <constraint firstAttribute="trailing" secondItem="bya-o6-yFL" secondAttribute="trailing" id="gya-Yj-Ewp"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="iOp-ay-S7a">
                                                 <rect key="frame" x="0.0" y="503" width="375" height="500"/>
+                                                <subviews>
+                                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="gvO-yq-aVC">
+                                                        <rect key="frame" x="0.0" y="456" width="375" height="44"/>
+                                                        <color key="barTintColor" red="0.99607843139999996" green="0.80784313730000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="hEX-nR-BTK"/>
+                                                        </connections>
+                                                    </searchBar>
+                                                </subviews>
                                                 <color key="backgroundColor" red="1" green="0.79389765020000003" blue="0.44105970659999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="gvO-yq-aVC" secondAttribute="trailing" id="Qm6-4t-szs"/>
+                                                    <constraint firstItem="gvO-yq-aVC" firstAttribute="leading" secondItem="iOp-ay-S7a" secondAttribute="leading" id="lxx-E8-p89"/>
                                                     <constraint firstAttribute="height" priority="250" constant="500" id="mkh-in-ir9"/>
+                                                    <constraint firstAttribute="bottom" secondItem="gvO-yq-aVC" secondAttribute="bottom" id="pFB-C0-vHx"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lRs-O0-Zp0">
@@ -100,6 +126,10 @@
                         <outlet property="splitter" destination="lRs-O0-Zp0" id="B8x-ko-PAI"/>
                         <outletCollection property="browsers" destination="6Bb-ij-8g1" collectionClass="NSMutableArray" id="PqX-va-UK5"/>
                         <outletCollection property="browserHeights" destination="1gd-bH-eNF" collectionClass="NSMutableArray" id="sEH-b8-7cE"/>
+                        <outletCollection property="browsers" destination="iOp-ay-S7a" collectionClass="NSMutableArray" id="arg-V8-6Su"/>
+                        <outletCollection property="browserHeights" destination="mkh-in-ir9" collectionClass="NSMutableArray" id="okg-Ng-yj8"/>
+                        <outletCollection property="searchs" destination="bya-o6-yFL" collectionClass="NSMutableArray" id="PlN-E3-xh1"/>
+                        <outletCollection property="searchs" destination="gvO-yq-aVC" collectionClass="NSMutableArray" id="2Hd-L5-J9D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

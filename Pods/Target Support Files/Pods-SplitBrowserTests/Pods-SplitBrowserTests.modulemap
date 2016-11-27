@@ -1,0 +1,6 @@
+framework module Pods_SplitBrowserTests {
+  umbrella header "Pods-SplitBrowserTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
