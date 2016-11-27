@@ -41,8 +41,13 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             self.beganCenter = self.splitter.center
         case .changed:
             let translation = sender.translation(in: sender.view)
-            self.splitter.center = CGPoint(x: self.beganCenter.x, y: self.beganCenter.y + translation.y)
+            let newCenter = CGPoint(x: self.beganCenter.x, y: self.beganCenter.y + translation.y)
+            guard newCenter.y > 20 else {
+                return
+            }
+            self.splitter.center = newCenter
             self.view.setNeedsUpdateConstraints()
+            self.view.setNeedsLayout()
         case .ended:
             self.beganCenter = CGPoint()
             break
