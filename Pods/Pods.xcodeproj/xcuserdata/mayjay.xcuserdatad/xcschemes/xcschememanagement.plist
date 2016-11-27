@@ -8,39 +8,89 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>0</integer>
 		</dict>
 		<key>Pods-SplitBrowserTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 		<key>Pods-SplitBrowserUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 		<key>ReactiveCocoa.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
 		</dict>
 		<key>Realm.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>4</integer>
 		</dict>
 		<key>RealmSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>5</integer>
 		</dict>
 		<key>Result.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>6</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict/>
+	<dict>
+		<key>0D3699CF57656376DB212DC96272D3BA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>528923A3D82B134B193EAEA7CAD0D988</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>968BC15482538D434051E9BC30BAA3D4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A69178520427D4B42F90D754E4A6EA9B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CD2BD42D694011FEE65FD443A91DA0CE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EA28325EC3CF92825DDF1FF71B5DF72B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EE686BE9D4C77042DD6D0BE6AF739829</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
 </dict>
 </plist>
