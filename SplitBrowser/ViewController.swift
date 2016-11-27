@@ -19,13 +19,39 @@ class ViewController: UIViewController, UIScrollViewDelegate, WKNavigationDelega
     @IBOutlet var browsers: [UIView]!
     @IBOutlet var browserHeights: [NSLayoutConstraint]!
     
-    var showIndex: Int = 1
+    var showIndex: Int = 1 {
+        willSet {
+            switch newValue {
+            case 0:
+                self.switchLabelItem.title = "translate"
+            case 1:
+                self.switchLabelItem.title = "web"
+            default: break
+            }
+            
+            DispatchQueue.main.async {
+                UIView.animate(withDuration: 0.25, animations: {
+                    self.browserHeights.enumerated().forEach{
+                        index, height in
+                        if index == newValue {
+                            height.constant = self.scrollView.bounds.height - self.splitter.bounds.size.height - 20
+                        } else {
+                            height.constant = 20
+                        }
+                    }
+                })
+            }
+        }
+    }
     
     lazy var webViews: [WKWebView] = []
     @IBOutlet weak var webSearchBar: UISearchBar!
     
     @IBOutlet weak var splitter: UIView!
     @IBOutlet var splitGesture: UIPinchGestureRecognizer!
+    
+    @IBOutlet weak var switchLabelItem: UIBarButtonItem!
+    @IBOutlet weak var switchBrowser: UISwitch!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -56,21 +82,27 @@ class ViewController: UIViewController, UIScrollViewDelegate, WKNavigationDelega
             guard let event = event.element, let value = event else {
                 return
             }
-            print(value)
+            guard let url = URL(string: value) else {
+                return
+            }
+            second.
         }
+        
+        
+        _ = self.switchBrowser.rx.value.subscribe {
+            event in
+            self.showIndex = event.element ?? false ? 1 : 0
+        }
+        
     }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         
-        self.browserHeights.enumerated().forEach{
-            index, height in
-            if index == self.showIndex {
-                height.constant = self.scrollView.bounds.height - self.splitter.bounds.size.height
-            } else {
-                height.constant = 0
-            }
-        }
+        self.showIndex = self.switchBrowser.isOn ? 1 : 0
+    }
+    
+    @IBAction func switchBrowser(_ sender: UISwitch) {
     }
     
     //MARK:- WKNavigationDelegate
