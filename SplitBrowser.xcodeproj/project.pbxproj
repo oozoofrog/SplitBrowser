@@ -14,6 +14,7 @@
 		D88F97C01DEAB2A300124D7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D88F97BE1DEAB2A300124D7E /* LaunchScreen.storyboard */; };
 		D88F97CB1DEAB2A300124D7E /* SplitBrowserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88F97CA1DEAB2A300124D7E /* SplitBrowserTests.swift */; };
 		D88F97D61DEAB2A300124D7E /* SplitBrowserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88F97D51DEAB2A300124D7E /* SplitBrowserUITests.swift */; };
+		D88F97E51DEAB54100124D7E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88F97E41DEAB54100124D7E /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		D88F97D11DEAB2A300124D7E /* SplitBrowserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SplitBrowserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D88F97D51DEAB2A300124D7E /* SplitBrowserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitBrowserUITests.swift; sourceTree = "<group>"; };
 		D88F97D71DEAB2A300124D7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D88F97E41DEAB54100124D7E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D88F97E51DEAB54100124D7E /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 				D88F97C91DEAB2A300124D7E /* SplitBrowserTests */,
 				D88F97D41DEAB2A300124D7E /* SplitBrowserUITests */,
 				D88F97B31DEAB2A300124D7E /* Products */,
+				D88F97E31DEAB54000124D7E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +127,14 @@
 				D88F97D71DEAB2A300124D7E /* Info.plist */,
 			);
 			path = SplitBrowserUITests;
+			sourceTree = "<group>";
+		};
+		D88F97E31DEAB54000124D7E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D88F97E41DEAB54100124D7E /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
