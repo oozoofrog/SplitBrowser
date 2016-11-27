@@ -46,8 +46,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
                 return
             }
             self.splitter.center = newCenter
-            self.view.setNeedsUpdateConstraints()
-            self.view.setNeedsLayout()
+            self.browserHeights.first?.constant = self.splitter.frame.origin.y
         case .ended:
             self.beganCenter = CGPoint()
             break
