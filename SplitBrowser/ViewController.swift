@@ -14,6 +14,12 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var scrollContentsView: UIView!
     
+    @IBOutlet var browsers: [UIView]!
+    @IBOutlet var browserHeights: [NSLayoutConstraint]!
+    
+    @IBOutlet weak var splitter: UIView!
+    @IBOutlet var splitGesture: UIPinchGestureRecognizer!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -28,6 +34,18 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func pinch(_ sender: UIPinchGestureRecognizer) {
+        switch sender.state {
+        case .began:
+            break
+        case .changed:
+            print(sender.location(in: sender.view))
+            break
+        case .ended:
+            break
+        default: break
+        }
+    }
 
     
 }
