@@ -8,17 +8,21 @@
 
 import UIKit
 import WebKit
+import RxCocoa
+import RxSwift
 
-class ViewController: UIViewController, UIScrollViewDelegate, UISearchBarDelegate {
+class ViewController: UIViewController, UIScrollViewDelegate, WKNavigationDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var scrollContentsView: UIView!
     
     @IBOutlet var browsers: [UIView]!
     @IBOutlet var browserHeights: [NSLayoutConstraint]!
-    @IBOutlet var searchs: [UISearchBar]!
+    
+    var showIndex: Int = 1
     
     lazy var webViews: [WKWebView] = []
+    @IBOutlet weak var webSearchBar: UISearchBar!
     
     @IBOutlet weak var splitter: UIView!
     @IBOutlet var splitGesture: UIPinchGestureRecognizer!
@@ -30,21 +34,55 @@ class ViewController: UIViewController, UIScrollViewDelegate, UISearchBarDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        browserHeights.first?.constant = 0
+        
         browsers.forEach{
             view in
             let web = WKWebView(frame: view.bounds)
             web.autoresizingMask = [.flexibleWidth, .flexibleHeight]
             view.insertSubview(web, at: 0)
         }
-    }
-    
-    //MARK: UISearchBarDelegate
-
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
+        if let first = self.browsers.first?.subviews.first as? WKWebView {
+            first.load(URLRequest(url: URL(string: "https://translate.google.com")!))
+        }
+        if let second = self.browsers.first?.subviews.first as? WKWebView {
+            second.navigationDelegate = self
+        }
+        
+        let _ = webSearchBar.rx.text.throttle(1, scheduler: MainScheduler.instance)
+        .distinctUntilChanged(==)
+        .subscribe { (event) in
+            guard let event = event.element, let value = event else {
+                return
+            }
+            print(value)
+        }
     }
     
-    //MARK: UIPanGesture
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+        self.browserHeights.enumerated().forEach{
+            index, height in
+            if index == self.showIndex {
+                height.constant = self.scrollView.bounds.height - self.splitter.bounds.size.height
+            } else {
+                height.constant = 0
+            }
+        }
+    }
+    
+    //MARK:- WKNavigationDelegate
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+    }
+    
+    //MARK:- UIPanGesture
     var beganCenter: CGPoint = CGPoint()
     @IBAction func pan(_ sender: UIPanGestureRecognizer) {
         switch sender.state {

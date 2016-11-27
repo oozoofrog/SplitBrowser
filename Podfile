@@ -7,7 +7,8 @@ target 'SplitBrowser' do
 
   # Pods for SplitBrowser
   pod 'RealmSwift'
-  pod 'ReactiveCocoa'
+  pod 'RxSwift'
+  pod 'RxCocoa'
 
   target 'SplitBrowserTests' do
     inherit! :search_paths
