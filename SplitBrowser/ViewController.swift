@@ -34,14 +34,17 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func pinch(_ sender: UIPinchGestureRecognizer) {
+    var beganCenter: CGPoint = CGPoint()
+    @IBAction func pan(_ sender: UIPanGestureRecognizer) {
         switch sender.state {
         case .began:
-            break
+            self.beganCenter = self.splitter.center
         case .changed:
-            print(sender.location(in: sender.view))
-            break
+            let translation = sender.translation(in: sender.view)
+            self.splitter.center = CGPoint(x: self.beganCenter.x, y: self.beganCenter.y + translation.y)
+            self.view.setNeedsUpdateConstraints()
         case .ended:
+            self.beganCenter = CGPoint()
             break
         default: break
         }

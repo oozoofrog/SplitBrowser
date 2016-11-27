@@ -34,6 +34,13 @@
                                                     <constraint firstAttribute="height" priority="250" constant="500" id="1gd-bH-eNF"/>
                                                 </constraints>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iOp-ay-S7a">
+                                                <rect key="frame" x="0.0" y="503" width="375" height="500"/>
+                                                <color key="backgroundColor" red="1" green="0.79389765020000003" blue="0.44105970659999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" priority="250" constant="500" id="mkh-in-ir9"/>
+                                                </constraints>
+                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lRs-O0-Zp0">
                                                 <rect key="frame" x="0.0" y="500" width="375" height="3"/>
                                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -42,15 +49,8 @@
                                                     <constraint firstAttribute="height" constant="3" id="eru-2J-3Q3"/>
                                                 </constraints>
                                                 <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="69M-ei-tAC" appends="YES" id="nFR-25-a52"/>
+                                                    <outletCollection property="gestureRecognizers" destination="4Sm-3h-oHw" appends="YES" id="2Ha-zQ-An2"/>
                                                 </connections>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iOp-ay-S7a">
-                                                <rect key="frame" x="0.0" y="503" width="375" height="500"/>
-                                                <color key="backgroundColor" red="1" green="0.79389765020000003" blue="0.44105970659999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" priority="250" constant="500" id="mkh-in-ir9"/>
-                                                </constraints>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -96,18 +96,17 @@
                     <connections>
                         <outlet property="scrollContentsView" destination="gKH-Pu-0vq" id="cy1-0y-2FS"/>
                         <outlet property="scrollView" destination="hEL-CN-vX5" id="FcA-6z-ARS"/>
-                        <outlet property="splitGesture" destination="69M-ei-tAC" id="gYE-TK-LfC"/>
                         <outlet property="splitter" destination="lRs-O0-Zp0" id="B8x-ko-PAI"/>
                         <outletCollection property="browsers" destination="6Bb-ij-8g1" collectionClass="NSMutableArray" id="PqX-va-UK5"/>
                         <outletCollection property="browserHeights" destination="1gd-bH-eNF" collectionClass="NSMutableArray" id="sEH-b8-7cE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <pinchGestureRecognizer id="69M-ei-tAC">
+                <panGestureRecognizer minimumNumberOfTouches="1" id="4Sm-3h-oHw">
                     <connections>
-                        <action selector="pinch:" destination="BYZ-38-t0r" id="Yrn-aM-Lgz"/>
+                        <action selector="pan:" destination="BYZ-38-t0r" id="F61-bm-zAO"/>
                     </connections>
-                </pinchGestureRecognizer>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
